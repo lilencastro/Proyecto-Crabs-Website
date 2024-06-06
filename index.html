@@ -14,7 +14,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <!-- ENLACE CSS -->
-    <link rel="stylesheet" href="./CSS/stylePrueba.css">
+    <link rel="stylesheet" href="./CSS/style.css">
     <title>Crabs - Marisqueria</title>
 </head>
 
@@ -46,85 +46,88 @@
         </nav>
     </header>
 
+    <!-- MAIN -->
     <main>
 
+        <!----------- banner-inicio ------------->
         <section>
             <div class="background-inicio-box">
-                <!-- Esto va como titulos, ahora se colocaron dentro de la imagen para visualizar el contenido -->
-                <!-- <h1>CRABS</h1> -->
-                <!-- <h2>El lugar más cercano al mar...</h2> -->
+                <div class="background-texto">
+                    <h1>CRABS</h1>
+                    <h2>El lugar más cercano al mar...</h2>
+                </div>
             </div>
         </section>
-
+        
+        <!----------- seccion presentacion ------------->
         <section class="seccion-presentacion">
-            <div class="presentacion-img-box">
+            <div class="seccion-presentacion-item">
                 <img src="./Imagenes/index/logo-completo-beigeoscuro.png" alt="Isologotipo de Crabs">
             </div>
-            <p>
-                Nuestro restaurante es un acogedor lugar donde se fusionan sabores auténticos con una atmósfera única.
-                Descubre la deliciosa experiencia culinaria que tenemos preparada para ti.
-            </p>
-            <a href="http://wa.link/64srfy" target="_blank">
-                Reserva
-            </a>
+            <div class="seccion-presentacion-item">
+                <p>
+                    Nuestro restaurante es un acogedor lugar donde se fusionan sabores auténticos con una atmósfera
+                    única.
+                    Descubre la deliciosa experiencia culinaria que tenemos preparada para ti.
+                </p>
+            </div>
+            <div class="seccion-presentacion-item">
+                <a href="http://wa.link/64srfy" target="_blank">
+                    Reserva
+                </a>
+            </div>
         </section>
 
-        <section class="seccion-contenido">
-            <div class="boxs-contenidos">
-                <div class="box-left">
-                    <img src="./Imagenes/index/home-section-contenidos-platos.jpg" alt="Plato de mariscos">
-                </div>
-                <div class="box-left">
-                    <h3>
-                        Nuestros platos
-                    </h3>
-                    <p>
-                        En nuestro restaurante, te ofrecemos una variedad de delicias culinarias cuidadosamente
-                        preparadas por nuestros chefs expertos. Desde platillos tradicionales hasta creaciones
-                        innovadoras, cada bocado es una experiencia única para tus sentidos. Sumérgete en un viaje
-                        gastronómico con nosotros y déjate sorprender por nuestra pasión por la buena comida.
-                    </p>
-                    <a href="./Pages/menu.html">
-                        Menú
-                    </a>
-                    <a href="https://drive.google.com/file/d/1v19xqVGK7A9fVLbtrMkwK5v-0rQP048C/view">
-                        Ver la carta
-                    </a>
-                </div>
-            </div>
-
-            <div class="boxs-contenidos">
-                <div class="box-left">
-                    <h3>
-                        Nuestros espacios
-                    </h3>
-                    <p>
-                        Nuestro restaurante ofrece un ambiente acogedor y elegante donde puedes disfrutar de una
-                        experiencia inolvidable. Desde nuestra cálida área de comedor hasta nuestros rincones íntimos y
-                        terraza con vistas impresionantes, cada espacio está diseñado para brindarte confort y estilo
-                        mientras disfrutas de tus platos favoritos.
-                    </p>
-                    <a href="./Pages/espacios.html">
-                        Espacios
-                    </a>
-                </div>
-                <div class="box-right">
-                    <img src="./Imagenes/index/home-section-contenidos-espacios.jpg" alt="Terraza del local">
-                </div>
-            </div>
-
-        </section>
-
+        <!----------- seccion carrusel ------------->
         <section class="seccion-carrusel">
-
-            <img src="./Imagenes/index/home_Carrusell/Home-carrusel-1.jpg" alt="Plato de mariscos">
-            <img src="./Imagenes/index/home_Carrusell/Home-carrusel-2.jpg" alt="Plato de mariscos">
-            <img src="./Imagenes/index/home_Carrusell/Home-carrusel-3.jpg" alt="Plato de mariscos">
-            <img src="./Imagenes/index/home_Carrusell/Home-carrusel-4.jpg" alt="Plato de mariscos">
-            <img src="./Imagenes/index/home_Carrusell/Home-carrusel-5.jpg" alt="Plato de mariscos">
-
+            <div class="carrusel-item item-1"></div>
+            <div class="carrusel-item item-2"></div>
+            <div class="carrusel-item item-3"></div>
+            <div class="carrusel-item item-4"></div>
+            <div class="carrusel-item item-5"></div>
         </section>
 
+        <!----------- seccion contenidos ------------->
+        <section class="seccion-contenidos" style="--bs-columns: 10; --bs-gap: 1rem;">
+            <div class="g-col-3">
+                <img src="./Imagenes/index/home-section-contenidos-platos.jpg" alt="Plato de mariscos" class="rounded">
+            </div>
+            <div class="g-col-7">
+                <h3>
+                    Nuestros platos
+                </h3>
+                <p>
+                    En nuestro restaurante, te ofrecemos una variedad de delicias culinarias cuidadosamente
+                    preparadas por nuestros chefs expertos. Desde platillos tradicionales hasta creaciones
+                    innovadoras, cada bocado es una experiencia única para tus sentidos. Sumérgete en un viaje
+                    gastronómico con nosotros y déjate sorprender por nuestra pasión por la buena comida.
+                </p>
+                <a href="./Pages/menu.html">Menú</a>
+                <a href="https://drive.google.com/file/d/1v19xqVGK7A9fVLbtrMkwK5v-0rQP048C/view">
+                    Ver la carta
+                </a>
+            </div>
+        </section>
+
+        <section class="seccion-contenidos descripcion" style="--bs-columns: 10; --bs-gap: 1rem;">
+            <div class="g-col-7 ">
+                <h3>
+                    Nuestros espacios
+                </h3>
+                <p>
+                    Nuestro restaurante ofrece un ambiente acogedor y elegante donde puedes disfrutar de una
+                    experiencia inolvidable. Desde nuestra cálida área de comedor hasta nuestros rincones íntimos y
+                    terraza con vistas impresionantes, cada espacio está diseñado para brindarte confort y estilo
+                    mientras disfrutas de tus platos favoritos.
+                </p>
+                <a href="./Pages/espacios.html">Espacios</a>
+            </div>
+            <div class="g-col-3">
+                <img src="./Imagenes/index/home-section-contenidos-espacios.jpg" alt="Terraza del local"
+                    class="rounded">
+            </div>
+
+        </section>
     </main>
 
     <footer class="container-box-footer">
