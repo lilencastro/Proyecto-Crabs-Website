@@ -1,0 +1,641 @@
+/* ACLARACIONES
+- Los botones se crearon con la etiqueta link dado que usar la etiqueta button se debe usar con un evento clic y no lo vimos. 
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+@font-face {
+    font-family: 'Helvetica-neue-thin';
+    src: url('../Fuentes/helvetica-neue/HelveticaNeueLight.otf');
+}
+
+/* ---------- BODY ------------------------- */
+
+body {
+    background-image: url(../Imagenes/fondo-trama-ostras.jpg);
+    background-size:cover;
+
+    font-family: 'Quicksand', sans-serif;
+    font-size: larger;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* ---------- HEADER ------------------------- */
+
+/* ----- Indicador de pagina ----- */
+#nosotros {
+    color: #EBD4B4;
+    font-weight: 600;
+}
+#espacios {
+    color: #EBD4B4;
+    font-weight: 600;
+}
+#menu {
+    color: #EBD4B4;
+    font-weight: 600;
+}
+#contacto {
+    color: #EBD4B4;
+    font-weight: 600;
+}
+
+/* ------------------------------- */
+
+
+header {
+    background-color: #0F9B9A;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.navbar {
+    width: 100% ;
+    height: 70px;
+}
+
+.navbar a {
+    color: #CBB79A;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #EBD4B4;
+    font-weight: 600;
+}
+
+.navbar ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 12px;
+}
+
+.navbar img {
+    width: auto;
+    height: 60px;
+    
+}
+
+.navbar-izquierda {
+    float: left;
+    padding: 5px 0px 5px 10px;
+}
+
+.navbar-derecha {
+    float: right;
+    padding: 5px 10px 5px 0px;
+}
+
+
+/* ---------- FOOTER ------------------------- */
+
+.container-box-footer {
+    background-color:#EBD4B4;
+    color: black;
+    display: block;
+    height: max-content;
+    padding: 20px;
+}
+
+
+/* ------- box redes -------- */
+
+.box-redes li {
+    list-style-type: none;
+}
+
+.box-redes a{
+    text-decoration: none;
+    color: #0d7c7c;
+}
+
+.box-redes a:hover{
+    text-decoration: none;
+    color: #0F9B9A;
+    font-weight: 500;
+
+}
+
+/* ------- box botones -------- */
+.box-botones {
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+}
+
+.boton-Whatsapp {
+    display: block;
+    text-align: center;
+    background-color: #01BB2D;
+    color: white;
+    border-color: white;
+    border-style: solid;
+    border-width: 2px;
+    height: auto;
+    width: 7rem;
+    font-size: 1rem;
+    border-radius: 30px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 7px;
+    padding: 7px 10px;
+    text-decoration: none;
+}
+
+/* USAR POSITION FIXED PARA QUE QUEDE EN EL COSTADO */
+.boton-Whatsapp:hover {
+    color: white;
+    background-color: #008002;
+    border-color: #008002;
+    border-style: solid;
+    border-width: 2px;
+    font-weight: 400;
+}
+
+
+/* ------- box datos -------- */
+
+.box-datos {
+    display: block;
+}
+
+.box-datos li {
+    list-style-type: none;
+}
+
+.box-datos a{
+    text-decoration: none;
+    color:#0d7c7c
+}
+
+.box-datos a:hover{
+    color: #0F9B9A;
+    font-weight: 500;
+
+}
+
+/* ------- box derechos -------- */
+
+.derechos {
+    font-size: small;
+    color: black;
+    display: block;
+    text-align: center;
+}
+
+
+
+/* ---------------------------------------------------------------------------------------------- */
+
+/* ---------- INDEX ------------------------- */
+
+/* ---------- inicio ----------- */
+
+.background-inicio-box {
+    background-image: url('../Imagenes/index/background-inicio-completo.jpg');
+    background-size: cover;
+    background-position-y: center;
+    height: 600px;
+}
+
+/* ---------- seccion presentacion ----------- */
+
+.seccion-presentacion {
+    margin: 120px 20px 200px 20px;
+    height: auto;
+    text-align: center;
+}
+
+.presentacion-img-box img {
+    height: 300px;
+    width: auto;
+}
+
+.seccion-presentacion p {
+    margin-bottom: 40px;
+}
+
+.seccion-presentacion a {
+    height: auto;
+    width: 7rem;
+    font-size: 2Opx;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    background-color: #0F9B9A;
+    border-radius: 50px;
+    border-style: none;
+    padding: 15px 20px;
+}
+
+.seccion-presentacion a:hover {
+    background-color: #0d7c7c;
+}
+
+/* ---------- seccion contenido ----------- */
+
+.boxs-contenidos {
+    width: 100%;
+    padding: 0px 80px;
+}
+
+.box-left {
+    float: left;
+    height: 400px;
+}
+
+.box-left h3 {
+    text-align: left;
+    display: block;
+}
+
+.box-left img {
+    height: 350px;
+    width: auto;
+    margin-right: 20px;
+}
+
+.box-left p {
+    text-align: left;
+    max-width: 800px;
+}
+
+.box-right img {
+    height: 350px;
+    width: auto;
+}
+
+.seccion-contenido a {
+    height: auto;
+    width: 7rem;
+    font-size: 1rem;
+    color: #0F9B9A;
+    background-color: white;
+    border-color: #0d7c7c;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 30px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-decoration: none;
+    padding: 5px 15px;
+    margin-left: 5px;
+}
+
+.seccion-contenido a:hover {
+    color: white;
+    background-color: #0F9B9A;
+    border-radius: 30px;
+    border-style: none;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* ---------- seccion carrusel ----------- */
+
+.seccion-carrusel {
+    display: inline-block;
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+.seccion-carrusel img {
+    width: 290px;
+    height: 290px;
+    margin-inline: 4px;
+}
+
+
+/* ---------- SECCION NOSOTROS ------------------------- */
+
+/* ------- box nosotros presentacion -------- */
+
+.box-nosotros-presentacion {
+    display: block;
+    text-align: center;
+    height: 300px;
+    padding-top: 70px;
+}
+
+.box-nosotros-presentacion h1 {
+    font-family: 'Helvetica-neue-thin';
+    font-size: 48px;
+    font-weight: 200;
+}
+
+/* ------- box nosotros enlaces -------- */
+
+.box-nosotros-enlaces {
+    width: 100%;
+    height: auto;
+    margin-bottom: 100px;
+}
+
+.enlace {
+    display: inline-block;
+    margin-inline: 50px;
+    margin-left: 110px;
+}
+.enlace img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #0d7c7c;
+}
+.enlace h2 {
+    font-size: 24px;
+}
+.enlace p {
+    width: 300px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.enlace a {
+    height: auto;
+    width: 6rem;
+    font-size: 18px;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    text-decoration: none;
+    background-color: #0F9B9A;
+    border-radius: 30px;
+    border-style: none;
+    padding: 10px 15px;
+}
+
+.enlace a:hover {
+    background-color: #0d7c7c;
+}
+
+/* ------- box nosotros valoraciones -------- */
+
+.box-nosotros-valoraciones {
+
+    width: 100%;
+    height: 400px;
+    margin-bottom: 10px;
+    background-color:#EBD4B4;
+    padding: 20px;
+
+}
+
+.box-nosotros-valoraciones h3 {
+    color: #0d7c7c;
+    display: block;
+    text-align: center;
+    /* font-family: 'Helvetica-neue-thin'; */
+    font-size: 24px;   
+    font-weight: 200;
+    margin-bottom: 60px;
+}
+
+.box-nosotros-valoraciones div {
+    display: inline-block;
+    margin-inline: 20px;
+}
+
+.box-nosotros-valoraciones div p {
+
+    text-align: center;
+    font-size: 1rem;
+    font-style: oblique ;
+    max-width: 400px;
+    max-height: 100px;
+    
+    border-style: dotted;
+    padding: 20px;
+    border-radius: 80px;
+    border-width: 2px;
+    border-color: #CBB79A;
+}
+
+/* ---------- SECCION ESPACIOS ------------------------- */
+
+.espacios-box-main {
+    display: inline-block;
+    padding-top: 70px;
+}
+
+.seccion-menu h1{
+    font-family: 'Helvetica-neue-thin';
+    font-size: 48px;
+    font-weight: 200;
+}
+
+.espacios-menu li {
+    list-style-type: none;
+}
+
+/* ------- seccion categorias -------- */
+
+.menu-cabecera {
+    display: block;
+    text-align: center;
+    height: auto;
+    padding-top: 70px;
+}
+.menu-cabecera h1 {
+    display: block;
+    text-align: center;
+    font-family: 'Helvetica-neue-thin';
+    font-size: 48px;
+    font-weight: 200;
+}
+
+.menu-categorias {
+    display: inline-block;
+    width: 100%;
+    padding-top: 90px;
+}
+
+
+.menu-cabecera a {
+    height: auto;
+    width: 8rem;
+    font-size: 20px;
+    color: #0d7c7c;
+    background-color: white;
+    border-color: #0d7c7c;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 30px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    padding: 5px 15px;
+    margin-left: 5px;
+}
+
+.menu-cabecera a:hover {
+    color: white;
+    background-color: #0F9B9A;
+    border-radius: 30px;
+    border-style: none;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+.menu-categorias div {
+    display: inline-block;
+}
+
+.menu-categorias a {
+    height: auto;
+    width: 6rem;
+    font-size: 18px;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    text-decoration: none;
+    background-color: #0F9B9A;
+    border-radius: 30px;
+    border-style: none;
+    padding: 10px 15px;
+}
+
+.menu-categorias a:hover {
+    background-color: #0d7c7c;
+}
+
+.menu-categorias img {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 10px;
+}
+
+
+/* ---------- SECCION ESPACIOS ------------------------- */
+
+.seccion-contacto {
+    width: max-content;
+    padding: 20px 40px;
+    display: inline-block;
+
+    height: auto;
+}
+
+.contacto-formulario h1 {
+    font-family: 'Helvetica-neue-thin';
+    font-size: 36px;
+    font-weight: 200;
+}
+
+.contacto-formulario {
+    float: left;
+    margin-inline: 30px;
+}
+
+.contacto-formulario form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin: 0 auto;
+}
+
+.contacto-formulario label {
+    display: block;
+}
+
+.contacto-formulario input[type="text"],
+input[type="email"], input[type="asunto"] {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.contacto-formulario textarea {
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.contacto-formulario input[type="submit"] {
+    background-color: #0F9B9A;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contacto-formulario input[type="submit"]:hover {
+    background-color: #0d7c7c;
+}
+
+.contacto-datos {
+    float: right;
+    text-align: center;
+    width: 300px;
+}
+
+.contacto-datos h2 {
+    font-family: 'Helvetica-neue-thin';
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.contacto-ubicacion iframe {
+    width: 100%;
+    height: 400px;
+}
+
+
+
+/* BOTON{
+    text-align: center;
+    display: block;
+    height: auto;
+    width: 6rem;
+    font-size: 1rem;
+    color: #0F9B9A;
+    background-color: white;
+    border-color: #0d7c7c;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 30px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 7px;
+    padding: 7px 10px;
+    text-decoration: none;
+   
+}
+
+.BOTON:hover {
+    color: white;
+    background-color: #0d7c7c;
+    border-color: #0d7c7c;
+    border-style: solid;
+    border-width: 2px;
+    font-weight: 400;
+} */
