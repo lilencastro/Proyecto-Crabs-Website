@@ -26,13 +26,12 @@ body {
 }
 
 /* ---------- HEADER ------------------------- */
-
 .container-navbar  {
     background-color: #0F9B9A;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: auto;
+    /* width: auto; */
     height: 100px;
     padding: 15px 15px;
     filter: drop-shadow(0px 0px 5px #2a2a2a);
@@ -58,21 +57,33 @@ body {
     
 }
 
+@media (width < 670px) {
+    /*  navbar */
+    .container-navbar div a img {
+        width: 50px;
+        height: auto;
+    }
+    .nav-link {
+        font-size: 1rem;
+    }
+}
+
 
 /* ---------- FOOTER ------------------------- */
 
 .container-box-footer {
     background-color:#EBD4B4;
     color: black;
-    height: 150px; /*ver aca responsive*/
+    height: 130px; /*ver aca responsive*/
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 30px;
+    grid-template-rows: 1fr 35px;
     grid-template-areas: 
     "box-redes box-datos box-botones"
     "derechos derechos derechos";
     align-items: center;
-    padding: 20px 20px 5px;
+    padding: 0px 30px 5px;
+    box-shadow: -4px -4px 20px #CBB79A ;
 }
 .container-box-footer ul {
     padding-left: 0;
@@ -104,8 +115,8 @@ body {
 }
 .boton-Whatsapp {
     position: fixed;
-    bottom: 35px;
-    right: 20px;
+    bottom: 40px;
+    right: 30px;
     display: block;
     text-align: center;
     background-color: #01BB2D;
@@ -123,6 +134,7 @@ body {
     margin-bottom: 7px;
     padding: 7px 10px;
     text-decoration: none;
+    box-shadow: 2px 6px 10px #0f0e0e ;
 }
 .boton-Whatsapp:hover {
     color: white;
@@ -167,8 +179,14 @@ body {
     margin-bottom: 0px;
 }
 
+@media (width < 670px) {
+    .container-box-footer {
+        font-size: 16px;
+    }
+}
 
 /* ---------------------------------------------------------------------------------------------- */
+
 
 /* ---------- INDEX ------------------------- */
 
@@ -177,6 +195,7 @@ body {
     background-image: url('../Imagenes/index/home-background-inicio.jpg');
     background-size: cover;
     background-position-y: center;
+    width: auto;
     height: 500px;
     display: flex;
     justify-content: center;
@@ -340,6 +359,7 @@ body {
 }
 
 
+
 /* ---------- SECCION NOSOTROS ------------------------- */
 
 /* ------- box nosotros presentacion -------- */
@@ -352,7 +372,6 @@ body {
 }
 
 .box-nosotros-presentacion h1 {
-    font-family: 'Helvetica-neue-thin';
     font-size: 48px;
     font-weight: 200;
 }
@@ -449,6 +468,8 @@ body {
     border-color: #CBB79A;
 }
 
+
+
 /* ---------- SECCION ESPACIOS ------------------------- */
 
 .espacios-box-main {
@@ -457,7 +478,6 @@ body {
 }
 
 .seccion-menu h1{
-    font-family: 'Helvetica-neue-thin';
     font-size: 48px;
     font-weight: 200;
 }
@@ -466,47 +486,42 @@ body {
     list-style-type: none;
 }
 
+
+
+/* ---------- SECCION MENU ------------------------- */
+
 /* ------- seccion categorias -------- */
 
+/*  Cabecera */
 .menu-cabecera {
-    display: block;
+    display: flex;
     text-align: center;
-    height: auto;
-    padding-top: 70px;
+    height: 140px;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 .menu-cabecera h1 {
-    display: block;
-    text-align: center;
-    font-family: 'Helvetica-neue-thin';
     font-size: 48px;
     font-weight: 200;
 }
-
-.menu-categorias {
-    display: inline-block;
-    width: 100%;
-    padding-top: 90px;
-}
-
-
 .menu-cabecera a {
     height: auto;
-    width: 8rem;
-    font-size: 20px;
+    width: minmax(50px, 100px);
+    font-size: 18px;
     color: #0d7c7c;
-    background-color: white;
-    border-color: #0d7c7c;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 30px;
     font-family: 'Quicksand', sans-serif;
-    font-weight: 400;
+    font-optical-sizing: auto;
+    font-weight: 300;
     font-style: normal;
     text-decoration: none;
-    padding: 5px 15px;
-    margin-left: 5px;
+    background-color: white;
+    border-radius: 30px;
+    border: 2px #0d7c7c;
+    padding: 10px 15px;
+    text-align: center;
 }
-
 .menu-cabecera a:hover {
     color: white;
     background-color: #0F9B9A;
@@ -516,13 +531,32 @@ body {
     font-weight: 300;
     font-style: normal;
 }
-.menu-categorias div {
-    display: inline-block;
-}
 
+/*  Grilla */
+.menu-categorias {
+    display: grid;
+    grid-template-columns: repeat( auto-fill, minmax(190px,1fr));
+    gap: 40px;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 10px;
+    height: fit-content;
+}
+.menu-categorias img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 4px rgb(74, 74, 74);
+}
+.menu-categorias div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+}
 .menu-categorias a {
     height: auto;
-    width: 6rem;
+    width: min-content;
     font-size: 18px;
     color: white;
     font-family: 'Quicksand', sans-serif;
@@ -534,17 +568,21 @@ body {
     border-radius: 30px;
     border-style: none;
     padding: 10px 15px;
+    text-align: center;
 }
-
 .menu-categorias a:hover {
     background-color: #0d7c7c;
 }
 
-.menu-categorias img {
-    width: 300px;
-    height: 300px;
-    margin-bottom: 10px;
+@media (width < 670px) {
+    /*  Grilla */
+    .menu-categorias a {
+        height: auto;
+        width: 100%;
+        border-radius: 20px;
+    }
 }
+
 
 
 /* ---------- SECCION ESPACIOS ------------------------- */
@@ -558,7 +596,6 @@ body {
 }
 
 .contacto-formulario h1 {
-    font-family: 'Helvetica-neue-thin';
     font-size: 36px;
     font-weight: 200;
 }
@@ -619,7 +656,6 @@ input[type="email"], input[type="asunto"] {
 }
 
 .contacto-datos h2 {
-    font-family: 'Helvetica-neue-thin';
     font-size: 30px;
     font-weight: 100;
 }
