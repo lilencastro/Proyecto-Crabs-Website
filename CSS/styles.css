@@ -62,13 +62,13 @@ table {
   padding: 15px;
   filter: drop-shadow(0px 0px 5px #121212);
 }
-.container-navbar div img {
+.container-navbar div a img {
   width: auto;
   height: 60px;
   filter: drop-shadow(10px 7px 7px #0a5959);
 }
-.container-navbar div ul {
-  --bs-nav-link-hover-color: map-get($colors-map, beige-color);
+.container-navbar div ul :hover {
+  color: #EBD4B4;
 }
 .container-navbar div ul li {
   list-style-type: none;
@@ -90,13 +90,13 @@ table {
     padding: 10px;
     gap: 8px;
   }
-  .container-navbar div a img {
-    width: auto;
-    height: 40px;
-  }
   .container-navbar div {
     display: flex;
     justify-content: center;
+  }
+  .container-navbar div a img {
+    width: auto;
+    height: 40px;
   }
   .container-navbar div ul {
     justify-content: flex-end !important;
