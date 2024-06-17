@@ -1,0 +1,18 @@
+@import "reset";
+@import "maps";
+@import "header";
+@import "footer";
+@import "index";
+@import "extend";
+@import "mixins";
+@import "nosotros";
+
+// Tipografías
+@font-face {
+    font-family: 'Helvetica-neue-thin';
+    src: url('../Fuentes/helvetica-neue/HelveticaNeueLight.otf');
+}
+@font-face {
+    font-family: 'New-York-Regular';
+    src: url('../Fuentes/newyork/NewYork\ PERSONAL\ USE.otf');
+}

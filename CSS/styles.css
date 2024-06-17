@@ -1,0 +1,135 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix::after {
+  content: “”;
+  clear: both;
+  display: table;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  line-height: 1.5;
+  font-size: 1.6rem;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.container-navbar {
+  height: 100px;
+  background-color: #0F989A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  filter: drop-shadow(0px 0px 5px #121212);
+}
+.container-navbar div img {
+  width: auto;
+  height: 60px;
+  filter: drop-shadow(10px 7px 7px #0a5959);
+}
+.container-navbar div ul {
+  --bs-nav-link-hover-color: map-get($colors-map, beige-color);
+}
+.container-navbar div ul li {
+  list-style-type: none;
+}
+.container-navbar div ul li a {
+  color: #CBB79A;
+  text-decoration: none;
+}
+.container-navbar div ul li a :hover {
+  color: #EBD4B4;
+  font-weight: 600;
+}
+
+@media (width < 800px) {
+  .container-navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 8px;
+  }
+  .container-navbar div a img {
+    width: auto;
+    height: 40px;
+  }
+  .container-navbar div {
+    display: flex;
+    justify-content: center;
+  }
+  .container-navbar div ul {
+    justify-content: flex-end !important;
+  }
+  .nav-link {
+    font-size: 1.5rem;
+  }
+}
+.img-background-body, body {
+  background-image: url(../Imagenes/fondo-trama-ostras.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.img-background-body, body {
+  background-image: url(../Imagenes/fondo-trama-ostras.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.img-background-body, body {
+  background-image: url(../Imagenes/fondo-trama-ostras.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@font-face {
+  font-family: "Helvetica-neue-thin";
+  src: url("../Fuentes/helvetica-neue/HelveticaNeueLight.otf");
+}
+@font-face {
+  font-family: "New-York-Regular";
+  src: url("../Fuentes/newyork/NewYork PERSONAL USE.otf");
+}
+
+/*# sourceMappingURL=styles.css.map */
