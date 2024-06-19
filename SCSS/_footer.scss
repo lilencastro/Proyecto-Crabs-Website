@@ -22,10 +22,9 @@
         a {
             text-decoration: none;
             color: whitesmoke;
-            :hover {
-                color: map-get($colors-map, light-green-color);
-                font-weight: 500;
-            }
+        }
+        a:hover {
+            font-weight: 600;
         }
     }
     .box-botones {
@@ -34,32 +33,16 @@
             position: fixed;
             bottom: 40px;
             right: 30px;
-            display: block;
-            text-align: center;
-            background-color: map-get($colors-map, whatsapp-green-color);
-            color: whitesmoke;
-            border-color: whitesmoke;
-            border-style: solid;
-            border-width: 2px;
-            height: auto;
-            width: 7rem;
-            font-size: 1rem;
-            border-radius: 30px;
-            font-family: 'Quicksand', sans-serif;
-            font-weight: 400;
-            font-style: normal;
-            margin-bottom: 7px;
-            padding: 7px 10px;
             text-decoration: none;
-            box-shadow: 2px 6px 10px map-get($colors-map, black-shadow-color);
-            :hover {
-                color: whitesmoke;
-                background-color: map-get($colors-map, whatsapp-green-color);
-                border-color: map-get($colors-map, whatsapp-green-color);
-                border-style: solid;
-                border-width: 2px;
-                font-weight: 400;
+            filter: drop-shadow(2px 6px 7px map-get($colors-map, black-shadow-color));
+            img {
+                @include img(50px,50px);
             }
+        }
+        .boton-Whatsapp:hover {
+            border-color: map-get($colors-map, whatsapp-green-color);
+            border-style: solid;
+            font-weight: 600;
         }
     }
     .box-datos {
@@ -72,16 +55,29 @@
         a {
             text-decoration: none;
             color: whitesmoke;
-            :hover {
-                font-weight: 500;
-            }
+        }
+        a:hover {
+            font-weight: 600;
         }
     }
     .derechos {
         grid-area: derechos;
         place-self: center;
-        p {
-           
+        font-size: small;
+    }
+
+    nav {
+        ul {
+            li {
+                display: flex;
+                align-content: baseline;
+                justify-content: center;
+                img {
+                    display: inline;
+                    margin-right: 10px;
+                    @include img(25px,25px);
+                }
+            }
         }
     }
 
