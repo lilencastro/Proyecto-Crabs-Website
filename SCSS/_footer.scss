@@ -10,12 +10,10 @@
     "box-redes box-datos box-botones"
     "derechos derechos derechos";
     align-items: center;
-    padding: 0px 30px 5px;
     box-shadow: -4px -4px 15px map-get($colors-map, dark-beige-color);
 
     .box-redes {
         grid-area: box-redes;
-        justify-self: flex-start;
         li {
             list-style-type: none;
         }
@@ -39,15 +37,9 @@
                 @include img(50px,50px);
             }
         }
-        .boton-Whatsapp:hover {
-            border-color: map-get($colors-map, whatsapp-green-color);
-            border-style: solid;
-            font-weight: 600;
-        }
     }
     .box-datos {
         grid-area: box-datos;
-        justify-self: center;
         li {
             list-style-type: none;
             text-align: center;
@@ -83,8 +75,28 @@
 
 }
 
-@media (width < 670px) {
-    .container-box-footer {
-        font-size: 16px;
+@media (width < 800px) {
+    .container-footer {
+        font-size: 12px;
+        .box-botones {
+            .boton-Whatsapp {
+                position: fixed;
+                bottom: 50px;
+                right: 30px;
+                img {
+                    @include img(45px,45px);
+                }
+            }
+        }
+        nav {
+            ul {
+                li {
+                    img {
+                        margin-right: 5px;
+                        @include img(18px,18px);
+                    }
+                }
+            }
+        }
     }
 }

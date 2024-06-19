@@ -1,0 +1,80 @@
+//Main - Cabecera
+.menu-cabecera {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 100%;
+    gap: 20px;
+
+    h1 {
+        @extend .title-font;
+    }
+    a { //CHECK DE BOTON
+        height: auto;
+        width: 120px;
+        color: map-get($colors-map, dark-green-color);
+        font-family: map-get($typography-map,basis-font);
+        font-weight: 400;
+        text-decoration: none;
+        background-color:  whitesmoke;
+        border-radius: 30px;
+        border-style: none;
+        padding: 10px 15px;
+        filter: drop-shadow(5px 5px 10px map-get($colors-map, beige-color));
+    }
+    a:hover {
+        background-color: map-get($colors-map, dark-green-color);
+    }
+}
+
+
+//Main - Grilla
+.menu-categorias {
+    display: grid;
+    grid-template-columns: repeat( auto-fill, minmax(190px,1fr));
+    gap: 40px;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0px 20px;
+    height: fit-content;
+    margin-bottom: 70px;
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 15px;
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 4px rgb(74, 74, 74);
+        }
+        p {
+            height: auto;
+            width: min-content;
+            color: white;
+            @include font (2rem, 200, map-get($typography-map,basis-font));
+            text-decoration: none;
+            background-color:map-get($colors-map, light-green-color);
+            border-radius: 30px;
+            padding: 10px 15px;
+            text-align: center;
+        }
+    }
+}
+
+@media (width < 680px) {
+    //Grilla
+    .menu-categorias {
+        div {
+            p {
+                height: auto;
+                width:  100%;
+                border-radius: 30px;
+            }
+        }
+    }
+}

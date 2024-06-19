@@ -63,9 +63,9 @@ table {
   background-repeat: no-repeat;
 }
 
-.title-font, .container-nosotros-presentacion div h1 {
+.title-font, .titulo-contacto, .menu-cabecera h1, .container-nosotros-presentacion div h1 {
   font-family: "New-York-Regular";
-  font-size: 4rem;
+  font-size: 6rem;
   font-weight: 200;
 }
 
@@ -136,12 +136,10 @@ table {
   grid-template-rows: 1fr 35px;
   grid-template-areas: "box-redes box-datos box-botones" "derechos derechos derechos";
   align-items: center;
-  padding: 0px 30px 5px;
   box-shadow: -4px -4px 15px #CBB79A;
 }
 .container-footer .box-redes {
   grid-area: box-redes;
-  justify-self: flex-start;
 }
 .container-footer .box-redes li {
   list-style-type: none;
@@ -167,14 +165,8 @@ table {
   width: 50px;
   height: 50px;
 }
-.container-footer .box-botones .boton-Whatsapp:hover {
-  border-color: #01BB2D;
-  border-style: solid;
-  font-weight: 600;
-}
 .container-footer .box-datos {
   grid-area: box-datos;
-  justify-self: center;
 }
 .container-footer .box-datos li {
   list-style-type: none;
@@ -204,9 +196,23 @@ table {
   height: 25px;
 }
 
-@media (width < 670px) {
-  .container-box-footer {
-    font-size: 16px;
+@media (width < 800px) {
+  .container-footer {
+    font-size: 12px;
+  }
+  .container-footer .box-botones .boton-Whatsapp {
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+  }
+  .container-footer .box-botones .boton-Whatsapp img {
+    width: 45px;
+    height: 45px;
+  }
+  .container-footer nav ul li img {
+    margin-right: 5px;
+    width: 18px;
+    height: 18px;
   }
 }
 .img-background-body, body {
@@ -215,26 +221,9 @@ table {
   background-repeat: no-repeat;
 }
 
-.title-font, .container-nosotros-presentacion div h1 {
+.title-font, .titulo-contacto, .menu-cabecera h1, .container-nosotros-presentacion div h1 {
   font-family: "New-York-Regular";
-  font-size: 4rem;
-  font-weight: 200;
-}
-
-.subtitle-font, .container-nosotros-enlaces div h2 {
-  font-family: "New-York-Regular";
-  font-size: 2.7rem;
-}
-
-.img-background-body, body {
-  background-image: url(../Imagenes/fondo-trama-ostras.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.title-font, .container-nosotros-presentacion div h1 {
-  font-family: "New-York-Regular";
-  font-size: 4rem;
+  font-size: 6rem;
   font-weight: 200;
 }
 
@@ -419,6 +408,160 @@ table {
   }
   .container-nosotros-valoraciones div p {
     font-size: 1.3rem;
+  }
+}
+.menu-cabecera {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 100%;
+  gap: 20px;
+}
+.menu-cabecera a {
+  height: auto;
+  width: 120px;
+  color: #0a5959;
+  font-family: "Quicksand";
+  font-weight: 400;
+  text-decoration: none;
+  background-color: whitesmoke;
+  border-radius: 30px;
+  border-style: none;
+  padding: 10px 15px;
+  filter: drop-shadow(5px 5px 10px #EBD4B4);
+}
+.menu-cabecera a:hover {
+  background-color: #0a5959;
+}
+
+.menu-categorias {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 40px;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0px 20px;
+  height: fit-content;
+  margin-bottom: 70px;
+}
+.menu-categorias div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 15px;
+}
+.menu-categorias div img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 4px rgb(74, 74, 74);
+}
+.menu-categorias div p {
+  height: auto;
+  width: min-content;
+  color: white;
+  font-size: 2rem;
+  font-weight: 200;
+  font-family: "Quicksand";
+  text-decoration: none;
+  background-color: #0F989A;
+  border-radius: 30px;
+  padding: 10px 15px;
+  text-align: center;
+}
+
+@media (width < 680px) {
+  .menu-categorias div p {
+    height: auto;
+    width: 100%;
+    border-radius: 30px;
+  }
+}
+.titulo-contacto {
+  text-align: center;
+  margin: 50px 0px;
+}
+
+.seccion-contacto {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  align-items: center;
+  max-width: 900px;
+  height: max-content;
+  gap: 100px;
+  margin: 0 auto;
+  padding: 0px 50px 100px;
+}
+.seccion-contacto .contacto-formulario form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: "Quicksand";
+}
+.seccion-contacto .contacto-formulario form label {
+  display: block;
+}
+.seccion-contacto .contacto-formulario form input[type=text],
+.seccion-contacto .contacto-formulario form input[type=email],
+.seccion-contacto .contacto-formulario form input[type=asunto] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+.seccion-contacto .contacto-formulario form textarea {
+  width: 100%;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+.seccion-contacto .contacto-formulario form input[type=submit] {
+  background-color: #0F989A;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 100px;
+  font-size: 16px;
+  align-self: center;
+}
+.seccion-contacto .contacto-formulario form input[type=submit]:hover {
+  background-color: #0a5959;
+}
+.seccion-contacto .contacto-datos {
+  height: fit-content;
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+  gap: 10px;
+  font-family: "Quicksand";
+}
+.seccion-contacto .contacto-datos h2 {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.contacto-ubicacion iframe {
+  width: 100%;
+  height: 400px;
+}
+
+@media (width < 800px) {
+  h1 {
+    font-size: 3rem;
+    font-weight: 200;
+  }
+  .contacto-ubicacion iframe {
+    width: 100%;
+    height: 280px;
   }
 }
 @font-face {
