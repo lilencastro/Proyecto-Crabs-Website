@@ -57,6 +57,23 @@ table {
   border-spacing: 0;
 }
 
+.img-background-body, body {
+  background-image: url(../Imagenes/fondo-trama-ostras.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.title-font, .container-nosotros-presentacion div h1 {
+  font-family: "New-York-Regular";
+  font-size: 4rem;
+  font-weight: 200;
+}
+
+.subtitle-font, .container-nosotros-enlaces div h2 {
+  font-family: "New-York-Regular";
+  font-size: 2.7rem;
+}
+
 .container-navbar {
   height: 100px;
   background-color: #0F989A;
@@ -109,23 +126,92 @@ table {
     font-size: 1.5rem;
   }
 }
-.img-background-body, body {
-  background-image: url(../Imagenes/fondo-trama-ostras.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+.container-footer {
+  background: linear-gradient(0deg, #0a5959 0%, #0F989A 68%);
+  color: whitesmoke;
+  font-weight: 300;
+  height: 130px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 35px;
+  grid-template-areas: "box-redes box-datos box-botones" "derechos derechos derechos";
+  align-items: center;
+  padding: 0px 30px 5px;
+  box-shadow: -4px -4px 15px #CBB79A;
 }
-
-.title-font, .container-nosotros-presentacion div h1 {
-  font-family: "New-York-Regular";
-  font-size: 4rem;
-  font-weight: 200;
+.container-footer .box-redes {
+  grid-area: box-redes;
+  justify-self: flex-start;
 }
-
-.subtitle-font, .container-nosotros-enlaces div h2 {
-  font-family: "New-York-Regular";
-  font-size: 2.7rem;
+.container-footer .box-redes li {
+  list-style-type: none;
 }
-
+.container-footer .box-redes a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+.container-footer .box-redes a :hover {
+  color: #0F989A;
+  font-weight: 500;
+}
+.container-footer .box-botones {
+  grid-area: box-botones;
+}
+.container-footer .box-botones .boton-Whatsapp {
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  display: block;
+  text-align: center;
+  background-color: #01BB2D;
+  color: whitesmoke;
+  border-color: whitesmoke;
+  border-style: solid;
+  border-width: 2px;
+  height: auto;
+  width: 7rem;
+  font-size: 1rem;
+  border-radius: 30px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 7px;
+  padding: 7px 10px;
+  text-decoration: none;
+  box-shadow: 2px 6px 10px #121212;
+}
+.container-footer .box-botones .boton-Whatsapp :hover {
+  color: whitesmoke;
+  background-color: #01BB2D;
+  border-color: #01BB2D;
+  border-style: solid;
+  border-width: 2px;
+  font-weight: 400;
+}
+.container-footer .box-datos {
+  grid-area: box-datos;
+  justify-self: center;
+}
+.container-footer .box-datos li {
+  list-style-type: none;
+  text-align: center;
+}
+.container-footer .box-datos a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+.container-footer .box-datos a :hover {
+  font-weight: 500;
+}
+.container-footer .derechos {
+  grid-area: derechos;
+  place-self: center;
+}
+@media (width < 670px) {
+  .container-box-footer {
+    font-size: 16px;
+  }
+}
 .img-background-body, body {
   background-image: url(../Imagenes/fondo-trama-ostras.jpg);
   background-size: cover;
@@ -285,8 +371,8 @@ table {
   column-gap: 40px;
   text-align: center;
   align-items: center;
-  background-color: #EBD4B4;
-  padding: 40px 30px;
+  background: linear-gradient(180deg, #EBD4B4 0%, rgba(249, 228, 202, 0.9764705882) 54%);
+  padding: 50px 30px;
 }
 .container-nosotros-valoraciones .titulo {
   grid-area: titulo;

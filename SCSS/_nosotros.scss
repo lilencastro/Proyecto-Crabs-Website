@@ -136,8 +136,8 @@ body {
     column-gap: 40px;
     text-align: center;
     align-items: center;
-    background-color: map-get($colors-map, beige-color);
-    padding: 40px 30px;
+    background: linear-gradient(180deg, #EBD4B4 0%, #f9e4caf9 54%);
+    padding: 50px 30px;
 
     .titulo {
         grid-area: titulo;
