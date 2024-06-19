@@ -4,4 +4,190 @@
 body {
     @extend .img-background-body;
 }
+//Main - Presentacion
+.container-nosotros-presentacion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    height: 400px;
+    div {
+        width: 50%;
+        h1 {
+            @extend .title-font;
+            text-align: center;
+        }
+        p {
+            @include font (2rem, 200, map-get($typography-map,paragraph-font));
+            text-align: center;
+        }
+    }
+}
 
+@media (width < 800px) {
+    .container-nosotros-presentacion {
+        height: 300px;
+        div {
+            width: 75%;
+            h1 {
+                text-align: center;
+                font-family: map-get($typography-map, title-font);
+                font-size: 3rem;
+                font-weight: 200;
+            }
+            p {
+                @include font (1.5rem, 200, map-get($typography-map,paragraph-font));
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+//Main - Enlaces
+.container-nosotros-enlaces {
+    display: grid;
+    grid-template-columns: repeat( auto-fill, minmax(270px,1fr));
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    height: fit-content;
+    margin-bottom: 100px;
+    div {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        align-content: space-around;
+        padding: 10px;
+        gap: 5px;
+        img {
+            width: max-content;
+            height: auto;
+            border-radius: 50%;
+            filter: drop-shadow(7px 7px 20px map-get($colors-map, dark-beige-color));
+            margin-bottom: 20px;
+        }
+        h2 {
+            @extend .subtitle-font;
+        }
+        p {
+            @include font(1.7rem,200,map-get($typography-map,paragraph-font));
+            width: 75%;
+            height: auto;
+        }
+        a { //CHECK DE BOTON
+            height: auto;
+            width: 10rem;
+            color: white;
+            font-family: map-get($typography-map,basis-font);
+            font-weight: 400;
+            font-style: normal;
+            text-decoration: none;
+            background-color: map-get($colors-map, light-green-color);
+            border-radius: 30px;
+            border-style: none;
+            padding: 10px 15px;
+            :hover {
+                background-color: map-get($colors-map, dark-green-color);
+            }
+        }
+    }
+}
+
+@media (width < 800px) {
+    .container-nosotros-enlaces {
+        margin-top: 10px;
+        row-gap: 100px;
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+            gap: 15px;
+            width: 100%;
+            padding: 0;
+            img {
+                width: 260px;
+                height: max-content;
+                border-radius: 50%;
+                filter: drop-shadow(7px 7px 20px map-get($colors-map, dark-beige-color));
+                margin-bottom: 20px;
+            }
+            p {
+                width: 75%;
+                height: auto;
+            }
+            a {
+                width: 90%;
+            }
+        }
+    }
+}
+
+
+//Main - Valoraciones
+.container-nosotros-valoraciones {
+    display: grid;
+    grid-template-areas: 
+    "titulo titulo titulo "
+    "val1 val2 val3 " ;
+    row-gap: 20px;
+    column-gap: 40px;
+    text-align: center;
+    align-items: center;
+    background-color: map-get($colors-map, beige-color);
+    padding: 40px 30px;
+
+    .titulo {
+        grid-area: titulo;
+        background: none;
+        padding: 0;
+    }
+    .val1 {
+        grid-area: val1;
+    }
+    .val2 {
+        grid-area: val2;
+    }
+    .val3 {
+        grid-area: val3;
+    }
+    .stars {
+        color: map-get($colors-map, light-green-color);
+        padding: 0.5rem 0px;
+    }
+
+    div {
+
+        h3 {
+            @include font (3rem,200,map-get($typography-map,title-font));
+        }
+        p {
+            @include font (1.3rem,200,map-get($typography-map,basis-font));
+        }
+    }
+}
+
+@media (width < 800px) {
+    .container-nosotros-valoraciones {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        text-align: center;
+
+        .titulo {
+            background: none;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-self: center;
+            width: 80%;
+            p {
+                font-size: 1.3rem;
+            }
+        }
+    }
+}

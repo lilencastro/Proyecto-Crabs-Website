@@ -4,3 +4,15 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+//Typography
+.title-font {
+    font-family: map-get($typography-map, title-font);
+    font-size: 4rem;
+    font-weight: 200;
+}
+
+.subtitle-font {
+    font-family: map-get($typography-map, title-font);
+    font-size: 2.7rem;
+}
