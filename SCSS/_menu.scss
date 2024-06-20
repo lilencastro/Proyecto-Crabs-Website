@@ -12,7 +12,7 @@
     h1 {
         @extend .title-font;
     }
-    a { //CHECK DE BOTON
+    a { 
         height: auto;
         width: 120px;
         color: map-get($colors-map, dark-green-color);
@@ -27,6 +27,22 @@
     }
     a:hover {
         background-color: map-get($colors-map, dark-green-color);
+    }
+}
+
+@media (width < 800px) {
+    .menu-cabecera {
+        height: 200px;
+        gap: 10px;
+        h1 {
+            font-size: 3rem;
+            font-weight: 200;
+        }
+        a {
+            width: 120px;
+            font-size: 1.3rem;
+            padding: 7px 7px;
+        }
     }
 }
 

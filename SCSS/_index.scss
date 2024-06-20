@@ -4,3 +4,258 @@
 body {
     @extend .img-background-body;
 }
+
+// banner-inicio
+.background-inicio-box {
+    background-image: url('../Imagenes/index/home-background-inicio.jpg');
+    background-size: cover;
+    background-position-y: center;
+    width: auto;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-image: fill 0 linear-gradient(rgba(41, 40, 40, 0.2), #000);
+    div{
+        text-align: center;
+        color: whitesmoke;
+        h1{
+            font-family: map-get($typography-map, title-font);
+            font-size: 10rem;
+            filter: drop-shadow(0px 0px 3px #121212)
+        }
+        h2{
+            font-family: map-get($typography-map, paragraph-font);
+            font-size: 2rem;
+            font-weight: 100;
+            filter: drop-shadow(8px 2px 2px map-get($colors-map,black-shadow-color));
+        }
+    }
+}
+
+@media (width < 800px) {
+    .background-inicio-box {
+        width: auto;
+        height: 300px;
+        div {
+            h1 {
+                font-size: 7rem;
+            }
+            h2 {
+                font-size: 1.7rem;
+            }
+        }
+    }
+}
+
+// seccion presentacion
+.seccion-presentacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    flex-direction: column;
+    margin: 55px;
+    gap: 20px;
+    div {
+        img {
+            height: 300px;
+            width: auto;
+            filter: drop-shadow(7px 3px 3px map-get($colors-map,beige-color));
+        }
+        p {
+            width: 100%;
+            height: auto;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        a {
+            height: auto;
+            width: 7rem;
+            font-size: 2Opx;
+            color: whitesmoke;
+            font-family: map-get($typography-map,basis-font);
+            font-weight: 400;
+            font-style: normal;
+            text-decoration: none;
+            background-color:map-get($colors-map,light-green-color);
+            border-radius: 30em;
+            border-style: none;
+            padding: 15px 20px;
+            position: relative;
+            box-shadow: 5px 5px 12px map-get($colors-map,dark-beige-color);
+        }
+        a:hover {
+            background-color: map-get($colors-map,dark-green-color);
+        }
+    }
+}
+
+@media (width < 800px) {
+    .seccion-presentacion {
+        height: 400px;
+        div {
+            img {
+                height: 160px;
+                width: auto;
+                filter: drop-shadow(7px 3px 3px map-get($colors-map,beige-color));
+            }
+        }
+    }
+}
+
+
+// seccion carrusel
+.seccion-carrusel {
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    height: 240px;
+    margin-bottom: 150px;
+    div {
+        flex: 1;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: none;
+        transition: flex 0.3s ease;
+    }
+    div:hover {
+        flex: 7;
+    }
+    .item-1 {
+        background-image: url('../Imagenes/index/home_Carrusell/Home-carrusel-1.jpg');
+    }
+    .item-2 {
+        background-image: url('../Imagenes/index/home_Carrusell/Home-carrusel-2.jpg');
+    }
+    .item-3 {
+        background-image: url('../Imagenes/index/home_Carrusell/Home-carrusel-3.jpg');
+    }
+    .item-4 {
+        background-image: url('../Imagenes/index/home_Carrusell/Home-carrusel-4.jpg');
+    }
+    .item-5 {
+        background-image: url('../Imagenes/index/home_Carrusell/Home-carrusel-5.jpg');
+    }
+}
+
+@media (width < 800px) {
+    .seccion-carrusel {
+        height: 100px;
+        margin-bottom: 80px;
+    }
+}
+
+
+//seccion contenidos
+.seccion-contenidos {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-auto-rows: 220px;
+    gap: 30px;
+    width: 800px;
+    margin: 0 auto;
+    padding: 0px 30px;
+    margin-bottom: 100px;
+
+    img {
+        width: max-content;
+        box-shadow: 5px 5px 10px map-get($colors-map,dark-beige-color), 
+        -5px -5px 10px map-get($colors-map,dark-beige-color) ;
+    }
+    a {
+        text-align: center;
+        height: auto;
+        width: 7rem;
+        font-size: 1.5rem;
+        color: map-get($colors-map,light-green-color);
+        background-color: whitesmoke;
+        border: 1px solid map-get($colors-map,dark-green-color);
+        border-radius: 30px;
+        font-family: map-get($typography-map,basis-font);
+        font-weight: 300;
+        text-decoration: none;
+        padding: 5px 15px;
+        box-shadow: 5px 5px 12px map-get($colors-map,dark-beige-color);
+    }
+    a:hover {
+        color: whitesmoke;
+        background-color: map-get($colors-map,light-green-color);
+    }
+    h3 {
+        @include font(2rem, 200, title-font);
+    }
+    p{
+        font-family: map-get($typography-map,paragraph-font);
+        font-size: 1.5rem;
+    }
+
+
+    .item1 {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        display: flex;
+        justify-content: center;
+    }
+    .item2 {
+        grid-column: 2/4;
+        grid-row: 1/2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        row-gap: 10px;
+    }
+    .item3 {
+        grid-column: 1/3;
+        grid-row: 2/3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        text-align: right;
+        row-gap: 10px;
+    }
+    .item4 {
+        grid-column: 3/4;
+        grid-row: 2/3;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (width < 800px) {
+    .seccion-contenidos {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        gap: 20px;
+        margin-bottom: 80px;
+        .item1 {
+            order: 1;
+        }
+        .item2 {
+            order: 2;
+            text-align: center;
+            align-items: center;
+        }
+        .item3 {
+            order: 4;
+            align-items: center;
+            text-align: center;
+        }
+        .item4 {
+            margin-top: 20px;
+            order: 3;
+        }
+        a {
+            width: 100%;
+            font-size: 1.2rem;
+        }
+        p{
+            font-size: 1.2rem;
+        }
+
+    }
+}

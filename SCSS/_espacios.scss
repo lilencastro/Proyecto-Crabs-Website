@@ -1,0 +1,74 @@
+//Titulo
+.titulo-espacios {
+    @extend .title-font;
+    text-align: center;
+    margin: 50px 0px;
+}
+
+@media (width < 800px) {
+    .titulo-espacios {
+        font-size: 3rem;
+        font-weight: 200;
+    }
+}
+
+
+//Main
+.container-espacios {
+    width: calc(100% - 100px);
+    height: max-content;
+    margin: 0px auto;
+    margin-bottom: 100px;
+    .seccion-img-espacios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 300px;
+        gap: 20px;
+        div {
+            border-radius: 30px;
+            background-size: cover;
+            background-position-y: center;
+            background-position-x: center;
+            box-shadow: 0px 0px 15px 0px map-get($colors-map,black-shadow-color)
+        }
+        
+        .bento-1 {
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+            background-image: url(../Imagenes/page-espacios/espacios-frente-1.jpg);
+        }
+        .bento-2 {
+            grid-column: 3/4;
+            grid-row: 1/2 ;
+            background-image: url(../Imagenes/page-espacios/espacios-frente-2.jpg);
+        }
+        .bento-3 {
+            grid-column: 1/2;
+            grid-row: 2/3;
+            background-image: url(../Imagenes/page-espacios/espacios-interior-1.jpg);
+        }
+        .bento-4 {
+            grid-column: 2/4;
+            grid-row: 2/4;
+            background-image: url(../Imagenes/page-espacios/espacios-terraza-1.jpg);
+        }
+        .bento-5 {
+            grid-column: 1/2;
+            grid-row: 3/4;
+            background-image: url(../Imagenes/page-espacios/\ espacios-interior-2.jpg);
+        }
+    }
+}
+
+@media (width < 800px) {
+    .container-espacios {
+        width: calc(100% - 60px);
+        .seccion-img-espacios {
+            grid-auto-rows: 150px;
+            gap: 10px;
+            div {
+                border-radius: 20px;
+            }
+        }
+    }
+}
