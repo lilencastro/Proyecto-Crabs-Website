@@ -50,6 +50,7 @@ select {
 ol,
 ul {
   list-style: none;
+  padding-left: 0px;
 }
 
 table {
@@ -141,7 +142,12 @@ table {
 .container-footer .box-redes {
   grid-area: box-redes;
 }
-.container-footer .box-redes li {
+.container-footer .box-redes ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.container-footer .box-redes ul li {
   list-style-type: none;
 }
 .container-footer .box-redes a {
@@ -167,8 +173,13 @@ table {
 }
 .container-footer .box-datos {
   grid-area: box-datos;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
 }
-.container-footer .box-datos li {
+.container-footer .box-datos ul li {
   list-style-type: none;
   text-align: center;
 }
@@ -215,23 +226,6 @@ table {
     height: 18px;
   }
 }
-.img-background-body, body {
-  background-image: url(../Imagenes/fondo-trama-ostras.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.title-font, .titulo-espacios, .titulo-contacto, .menu-cabecera h1, .container-nosotros-presentacion div h1 {
-  font-family: "New-York-Regular";
-  font-size: 6rem;
-  font-weight: 200;
-}
-
-.subtitle-font, .container-nosotros-enlaces div h2 {
-  font-family: "New-York-Regular";
-  font-size: 2.7rem;
-}
-
 .background-inicio-box {
   background-image: url("../Imagenes/index/home-background-inicio.jpg");
   background-size: cover;
@@ -441,7 +435,7 @@ table {
     flex-direction: column;
     width: 70%;
     gap: 20px;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
   }
   .seccion-contenidos .item1 {
     order: 1;
@@ -466,6 +460,12 @@ table {
   }
   .seccion-contenidos p {
     font-size: 1.2rem;
+  }
+}
+@media (width > 1700px) {
+  .seccion-contenidos {
+    width: 1200px;
+    grid-auto-rows: 300px;
   }
 }
 .container-nosotros-presentacion {
@@ -672,7 +672,7 @@ table {
   filter: drop-shadow(5px 5px 10px #EBD4B4);
 }
 .menu-cabecera a:hover {
-  background-color: #0a5959;
+  transform: scale(1.2);
 }
 
 @media (width < 800px) {
@@ -755,7 +755,7 @@ table {
   padding: 20px;
   border-radius: 15px;
   background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px 1px #121212;
   font-family: "Quicksand";
 }
 .seccion-contacto .contacto-formulario form label {

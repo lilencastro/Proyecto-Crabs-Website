@@ -1,6 +1,6 @@
 .container-footer {
     background: linear-gradient(0deg, map-get($colors-map,dark-green-color) 0%, map-get($colors-map,light-green-color) 68%);
-    color: whitesmoke;
+    color: $special-white;
     font-weight: 300;
     height: 130px; //ver aca responsive
     display: grid;
@@ -14,12 +14,17 @@
 
     .box-redes {
         grid-area: box-redes;
-        li {
-            list-style-type: none;
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            li {
+                list-style-type: none;
+            }
         }
         a {
             text-decoration: none;
-            color: whitesmoke;
+            color: $special-white;
         }
         a:hover {
             font-weight: 600;
@@ -40,13 +45,21 @@
     }
     .box-datos {
         grid-area: box-datos;
-        li {
-            list-style-type: none;
-            text-align: center;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+        
+        ul {
+            li {
+                list-style-type: none;
+                text-align: center;
+            }
         }
         a {
             text-decoration: none;
-            color: whitesmoke;
+            color: $special-white;
         }
         a:hover {
             font-weight: 600;

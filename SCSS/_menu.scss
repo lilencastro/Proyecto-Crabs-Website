@@ -19,14 +19,14 @@
         font-family: map-get($typography-map,basis-font);
         font-weight: 400;
         text-decoration: none;
-        background-color:  whitesmoke;
+        background-color: $special-white;
         border-radius: 30px;
         border-style: none;
         padding: 10px 15px;
         filter: drop-shadow(5px 5px 10px map-get($colors-map, beige-color));
     }
     a:hover {
-        background-color: map-get($colors-map, dark-green-color);
+        transform: scale(1.2);
     }
 }
 
@@ -45,6 +45,7 @@
         }
     }
 }
+
 
 
 //Main - Grilla

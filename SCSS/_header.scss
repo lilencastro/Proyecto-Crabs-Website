@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     padding: 30px;
-    filter: drop-shadow(0px 0px 5px map-get($colors-map, black-shadow-color));
+    filter: drop-shadow(0px 0px 5px $shadow);
     div {
         a{
             img {
