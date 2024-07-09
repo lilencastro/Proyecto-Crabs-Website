@@ -55,6 +55,13 @@ body {
     flex-direction: column;
     margin: 55px;
     gap: 20px;
+
+    .paragraph-presentation-box {
+        display: flex;
+        justify-content: center;
+        width: 60%;
+    }
+
     div {
         img {
             height: 300px;
@@ -62,10 +69,10 @@ body {
             filter: drop-shadow(7px 3px 3px map-get($colors-map,beige-color));
         }
         p {
-            width: 200px;
             height: auto;
             text-align: center;
             margin-bottom: 15px;
+            font-size: 1.5rem;
         }
         a {
             height: auto;
@@ -91,7 +98,7 @@ body {
 
 @media (width < 800px) {
     .seccion-presentacion {
-        height: 400px;
+        height: 500px;
         div {
             img {
                 height: 160px;
@@ -101,6 +108,26 @@ body {
         }
     }
 }
+
+@media (width < 600px) {
+    .seccion-presentacion {
+        height: 500px;
+        div {
+            p {
+                font-size: small;
+            }
+            a {
+                width: 4rem;
+                font-size: small;
+                font-weight: 200;
+                border-radius: 15em;
+                padding: 10px 15px;
+                box-shadow: 5px 5px 12px map-get($colors-map,dark-beige-color);
+            }
+        }
+    }
+}
+
 
 
 
@@ -153,7 +180,7 @@ body {
     grid-template-columns: 2fr 1fr 2fr;
     grid-auto-rows: 220px;
     gap: 30px;
-    width: 800px;
+    width: 70%;
     margin: 0 auto;
     padding: 0px 30px;
     margin-bottom: 100px;

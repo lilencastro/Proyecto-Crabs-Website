@@ -103,6 +103,11 @@ table {
   color: #EBD4B4;
   font-weight: 600;
 }
+.container-navbar .selected {
+  color: #EBD4B4;
+  font-weight: 600;
+  border-style: none;
+}
 
 @media (width < 800px) {
   .container-navbar {
@@ -274,16 +279,21 @@ table {
   margin: 55px;
   gap: 20px;
 }
+.seccion-presentacion .paragraph-presentation-box {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+}
 .seccion-presentacion div img {
   height: 300px;
   width: auto;
   filter: drop-shadow(7px 3px 3px #EBD4B4);
 }
 .seccion-presentacion div p {
-  width: 100%;
   height: auto;
   text-align: center;
   margin-bottom: 15px;
+  font-size: 1.5rem;
 }
 .seccion-presentacion div a {
   height: auto;
@@ -307,12 +317,28 @@ table {
 
 @media (width < 800px) {
   .seccion-presentacion {
-    height: 400px;
+    height: 500px;
   }
   .seccion-presentacion div img {
     height: 160px;
     width: auto;
     filter: drop-shadow(7px 3px 3px #EBD4B4);
+  }
+}
+@media (width < 600px) {
+  .seccion-presentacion {
+    height: 500px;
+  }
+  .seccion-presentacion div p {
+    font-size: small;
+  }
+  .seccion-presentacion div a {
+    width: 4rem;
+    font-size: small;
+    font-weight: 200;
+    border-radius: 15em;
+    padding: 10px 15px;
+    box-shadow: 5px 5px 12px #CBB79A;
   }
 }
 .seccion-carrusel {
@@ -360,7 +386,7 @@ table {
   grid-template-columns: 2fr 1fr 2fr;
   grid-auto-rows: 220px;
   gap: 30px;
-  width: 800px;
+  width: 70%;
   margin: 0 auto;
   padding: 0px 30px;
   margin-bottom: 100px;
@@ -481,6 +507,7 @@ table {
 }
 .container-nosotros-presentacion div h1 {
   text-align: center;
+  margin-bottom: 10px;
 }
 .container-nosotros-presentacion div p {
   font-size: 2rem;
@@ -536,7 +563,7 @@ table {
   margin-bottom: 20px;
 }
 .container-nosotros-enlaces div p {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 200;
   font-family: "Helvetica-neue-thin";
   width: 75%;

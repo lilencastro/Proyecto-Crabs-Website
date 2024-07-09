@@ -31,6 +31,12 @@
             }
         }
     }
+
+    .selected{
+        color: map-get($colors-map, beige-color);
+        font-weight: 600;
+        border-style: none;
+    }
 }
 
 @media (width < 800px) {
