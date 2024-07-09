@@ -773,12 +773,13 @@ table {
   height: max-content;
   gap: 100px;
   margin: 0 auto;
-  padding: 0px 50px 100px;
+  padding-bottom: 100px;
 }
 .seccion-contacto .contacto-formulario form {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 80%;
   padding: 20px;
   border-radius: 15px;
   background-color: white;
